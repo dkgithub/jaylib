@@ -783,10 +783,10 @@ static int jaylib_getmaterialmaptype(const Janet *argv, int32_t n) {
 
 static Janet jaylib_wrap_raycollision(RayCollision rayCollision) {
     JanetTable* table = janet_table(4);
-    janet_table_put(table, janet_wrap_keyword("hit"), janet_wrap_boolean(rayCollision.hit));
-    janet_table_put(table, janet_wrap_keyword("distance"), janet_wrap_number(rayCollision.distance));
-    janet_table_put(table, janet_wrap_keyword("point"), jaylib_wrap_vec3(rayCollision.point));
-    janet_table_put(table, janet_wrap_keyword("normal"), jaylib_wrap_vec3(rayCollision.normal));
+    janet_table_put(table, janet_ckeywordv("hit"), janet_wrap_boolean(rayCollision.hit));
+    janet_table_put(table, janet_ckeywordv("distance"), janet_wrap_number(rayCollision.distance));
+    janet_table_put(table, janet_ckeywordv("point"), jaylib_wrap_vec3(rayCollision.point));
+    janet_table_put(table, janet_ckeywordv("normal"), jaylib_wrap_vec3(rayCollision.normal));
     return janet_wrap_table(table);
 }
 

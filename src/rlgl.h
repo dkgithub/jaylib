@@ -134,18 +134,18 @@ static Janet cfun_rlDrawRenderBatchActive(int32_t argc, Janet *argv) {
 }
 
 static JanetReg rlgl_cfuns[] = {
-    {"rl-viewport", cfun_rlViewport, NULL},
-    {"rl-matrix-mode", cfun_rlMatrixMode, NULL},
-    {"rl-ortho", cfun_rlOrtho, NULL},
-    {"rl-push-matrix", cfun_rlPushMatrix, NULL},
-    {"rl-pop-matrix", cfun_rlPopMatrix, NULL},
-    {"rl-load-identity", cfun_rlLoadIdentity, NULL},
-    {"rl-translatef", cfun_rlTranslatef, NULL},
-    {"rl-rotatef", cfun_rlRotatef, NULL},
-    {"rl-scalef", cfun_rlScalef, NULL},
-    {"rl-enable-scissor-test", cfun_rlEnableScissorTest, NULL},
-    {"rl-scissor", cfun_rlScissor, NULL},
-    {"rl-mult-matrixf-screen-scale", cfun_rlMultMatrixfScreenScale, NULL},
-    {"rl-draw-render-batch-active", cfun_rlDrawRenderBatchActive, NULL},
+    {"rl-viewport", cfun_rlViewport, "(rl-viewport x y width height)\n\nSet viewport"},
+    {"rl-matrix-mode", cfun_rlMatrixMode, "(rl-matrix-mode mode)\n\nChoose matrix to be transformed"},
+    {"rl-ortho", cfun_rlOrtho, "(rl-ortho left right bottom top near-val far-val)\n\nSet orthographic projection"},
+    {"rl-push-matrix", cfun_rlPushMatrix, "(rl-push-matrix)\n\nPush current matrix to stack"},
+    {"rl-pop-matrix", cfun_rlPopMatrix, "(rl-pop-matrix)\n\nPop lattest inserted matrix from stack"},
+    {"rl-load-identity", cfun_rlLoadIdentity, "(rl-load-identity)\n\nReset current matrix to identity matrix"},
+    {"rl-translatef", cfun_rlTranslatef, "(rl-translatef x y z)\n\nTranslate current matrix"},
+    {"rl-rotatef", cfun_rlRotatef, "(rl-rotatef angle x y z)\n\nRotate current matrix"},
+    {"rl-scalef", cfun_rlScalef, "(rl-scalef x y z)\n\nScale current matrix"},
+    {"rl-enable-scissor-test", cfun_rlEnableScissorTest, "(rl-enable-scissor-test)\n\nEnable scissor test"},
+    {"rl-scissor", cfun_rlScissor, "(rl-scissor x y width height)\n\nScissor test"},
+    {"rl-mult-matrixf-screen-scale", cfun_rlMultMatrixfScreenScale, "(rl-mult-matrixf-screen-scale)\n\nMultiply current matrix by screen scale"},
+    {"rl-draw-render-batch-active", cfun_rlDrawRenderBatchActive, "(rl-draw-render-batch-active)\n\nDraw render batch"},
     {NULL, NULL, NULL}
 };

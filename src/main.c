@@ -25,5 +25,5 @@ JANET_MODULE_ENTRY(JanetTable *env) {
     janet_cfuns(env, "jaylib", threed_cfuns);
     janet_cfuns(env, "jaylib", rlgl_cfuns);
     janet_cfuns(env, "jaylib", shader_cfuns);
-    janet_cfuns(env, "jaylib", math_cfuns);
+    // janet_cfuns(env, "jaylib", math_cfuns);  // Math module has compatibility issues with Janet 1.39
 }
